@@ -44,7 +44,7 @@ margin = 0;
 numpoints = len(polyline);
 
 for (n =[0:numpoints-1]) {
-    lenxcomp = 0;
+    lenxcomp = 0; // point minus previous point absolute (difference)
     lenycomp = 0;
     lenzcomp = 0;
     // if not first point
