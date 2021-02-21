@@ -19,15 +19,8 @@ x = 0;
 y = 1;
 z = 2;
 
-polyline[n-1][x] = 0;
-polyline[n-1][y] = 0;
-polyline[n-1][z] = 0;
-
 prevlnelem = 0;
 
-prevpolyline[n-1][x] = 0;
-prevpolyline[n-1][y] = 0;
-prevpolyline[n-1][z] = 0;
 
 lnelem = 0;
 
@@ -50,13 +43,17 @@ for (n =[0:numpoints-1]) {
             pow(abs((polyline[n][z]-polyline[n-1][z])),2)
           )
         );
-        // extrude only if there is no more than 2 points
-        if(numpoints < 2) {
-            // from polyline at n linear extrude until [1]
-        }
+        anglexaxis = arccos((abs(polyline[n][x]-polyline[n-1][x])/lnelem);
+        angleyaxis = arccos((abs(polyline[n][y]-polyline[n-1][y])/lnelem);
+        anglezaxis = arccos((abs(polyline[n][z]-polyline[n-1][x])/lnelem);
 
+        lnxcomp = abs(polyline[n][x]-polyline[n-1][x]);
+        lnycomp = abs(polyline[n][y]-polyline[n-1][y]);
+        lnzcomp = abs(polyline[n][z]-polyline[n-1][z]);
+
+        // if n>=2 there will be a rotate between two vectors
         if(n>=2) {
-            // calc angle
+            // calc angle between vectors
             alpha = acos((polyline[n][x] * polyline[n-1][x] +
             polyline[n][y] * polyline[n-1][y] +
             polyline[n][z] * polyline[n-1][z])
@@ -71,50 +68,47 @@ for (n =[0:numpoints-1]) {
             ))));
             // here comes def of margin
             margin = tan(0.5*(180-alpha))*(0.5*section+extra_space);
-
-            //if n >0
+            // here: rotate extrude
+            rot_angle = 180 - alpha;
+            // calculate translation distance
+            rot_dist = sin(0.5*alpha)/(0.5*section+extra_space);
               // translate to current point --> to rotation points
-              //
 
+            translate([polyline[n-1][x],polyline[n-1][y],polyline[n-1][z]])
 
+            //rotate(0.5*alpha)
 
             // always: translate from origin to previous point
             // always: rotate from Origin
             // if n >0 translate margin
             //linear extrude until - margin unless n==max
 
-            if(n==2) {
-                translate([prevpolyline[n-1][x],prevpolyline[n-1][y],prevpolyline[n-1][z]])
-                linear_extrude(height = (prevlnelem-margin), center = true)square([20, 10], center = true);
-            }
-            if(n>=2 && n < numpoints-1) {
-                translate([prevpolyline[n-1][x],prevpolyline[n-1][y],prevpolyline[n-1][z]])
-                //linear extrude from point + margin in direction until point - margin
-                linear_extrude(height = (prevlnelem-margin), center = true)square([20, 10], center = true);
-            }
-            if(n == numpoints-1) {
-                //linear extrude until point
-            }
+            // extrude only if there is no more than 2 points
 
-
-            // if n =>2 linear extrude from prevprev + margin until prev - margin
-
-
-            // here: rotate extrude
-            rot_angle = 180 - alpha;
 
         }
+        // LINEAR EXTRUDE HERE
+        if(numpoints < 2) {
+            // from polyline at n linear extrude until [1]
+        }
 
+        if(n==2) {
+            translate([prevpolyline[n-1][x],prevpolyline[n-1][y],prevpolyline[n-1][z]])
+            linear_extrude(height = (prevlnelem-margin), center = true)square([20, 10], center = true);
+        }
+        if(n>=2 && n < numpoints-1) {
+            translate([prevpolyline[n-1][x],prevpolyline[n-1][y],prevpolyline[n-1][z]])
+            //linear extrude from point + margin in direction until point - margin
+            linear_extrude(height = (prevlnelem-margin), center = true)square([20, 10], center = true);
+        }
+        if(n == numpoints-1) {
+            //linear extrude until last point
+        }
 
     }
     // for next iteration store current point
     prevlnelem = lnelem;
-    prevpolyline[n-1][x] = polyline[n-1][x];
-    prevpolyline[n-1][y] = polyline[n-1][y];
-    prevpolyline[n-1][z] = polyline[n-1][z];
-    polyline[n-1][x] = polyline[n][x];
-    polyline[n-1][y] = polyline[n][y];
-    polyline[n-1][z] = polyline[n][z];
+
 
 
 }
