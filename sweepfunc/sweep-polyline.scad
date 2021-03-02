@@ -73,8 +73,8 @@ for (n =[0:numpoints-1]) {
             // calculate translation distance
             rot_dist = sin(0.5*alpha)/(0.5*section+extra_space);
               // translate to current point --> to rotation points
-
-            translate([polyline[n-1][x],polyline[n-1][y],polyline[n-1][z]])
+              // find rotation points
+            translate([polyline[n][x],polyline[n][y],polyline[n][z]])
 
             //rotate(0.5*alpha)
 
