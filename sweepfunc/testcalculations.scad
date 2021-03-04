@@ -13,9 +13,9 @@ function partderiveqx(x) = dirvx;
 function partderiveqy(y) = dirvy;
 function partderiveqz(z) = dirvz;
 
-function symmeqxvector([x0,y0,z0], [x1,y1,z1]) = (x - x0) / dirvx([x0,y0,z0], [x1,y1,z1]);
-function symmeqyvector([x0,y0,z0], [x1,y1,z1]) = (y - y0) / dirvy([x0,y0,z0], [x1,y1,z1]);
-function symmeqzvector([x0,y0,z0], [x1,y1,z1]) = (z - z0) / dirvz([x0,y0,z0], [x1,y1,z1]);
+function symmeqxv([x0,y0,z0], [x1,y1,z1]) = (x - x0) / dirvx([x0,y0,z0], [x1,y1,z1]);
+function symmeqyv([x0,y0,z0], [x1,y1,z1]) = (y - y0) / dirvy([x0,y0,z0], [x1,y1,z1]);
+function symmeqzv([x0,y0,z0], [x1,y1,z1]) = (z - z0) / dirvz([x0,y0,z0], [x1,y1,z1]);
 
 function lnelem([x0,y0,z0], [x1,y1,z1]) = abs(
   sqrt(
@@ -24,6 +24,7 @@ function lnelem([x0,y0,z0], [x1,y1,z1]) = abs(
     pow(abs(z1 - z0),2)
   )
 );
+
 anglexaxis = arccos((abs(x1-x0)/lnelem([x0,y0,z0], [x1,y1,z1]) );
 angleyaxis = arccos((abs(y1-y0)/lnelem([x0,y0,z0], [x1,y1,z1]) );
 anglezaxis = arccos((abs(z1-x0)/lnelem([x0,y0,z0], [x1,y1,z1]) );
@@ -41,6 +42,8 @@ z1 * z0)
       pow(abs(y0),2)+
       pow(abs(z0),2))
 ))));
+
+
 
 lnxcomp = abs(x1-x0);
 lnycomp = abs(y1-y0);
