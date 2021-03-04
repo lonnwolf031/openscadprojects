@@ -1166,11 +1166,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.21025203"
-     inkscape:cx="686.5856"
-     inkscape:cy="1200.4143"
+     inkscape:zoom="0.42050406"
+     inkscape:cx="378.01774"
+     inkscape:cy="460.52374"
      inkscape:document-units="mm"
-     inkscape:current-layer="surface578482"
+     inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
      showgrid="false"
      fit-margin-top="5"
@@ -1190,7 +1190,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1201,7 +1201,7 @@
      transform="translate(53.614798,5.8504511)">
     <g
        id="g2985"
-       transform="matrix(0.72903799,0,0,0.73021788,287.92413,-79.904154)"
+       transform="matrix(0.72903799,0,0,0.73021788,334.95944,-77.855016)"
        style="stroke-width:1.37056">
       <path
          style="fill:none;stroke:#000000;stroke-width:0.409939;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -1307,6 +1307,10 @@
            style="fill:none;stroke:#000000;stroke-width:0.0972003px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
            d="m 126.77386,95.70498 -1.19578,-2.044967 -2.08146,1.390501"
            id="path2867" />
+        <path
+           style="fill:none;stroke:#17917e;stroke-width:0.46472433;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+           d="m 110.04593,126.0603 1.97952,-1.30436 -1.50496,-1.99859"
+           id="path2867-3" />
       </g>
       <path
          style="fill:none;stroke:#000000;stroke-width:1.73376;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -3119,6 +3123,60 @@
           </g>
         </g>
       </g>
+    </g>
+    <path
+       style="fill:none;stroke:#17917e;stroke-width:1.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 105.99801,118.82237 c 0,0 -84.924383,-5.22991 -132.261989,-72.020421"
+       id="path1501"
+       sodipodi:nodetypes="cc" />
+    <g
+       id="g1514">
+      <g
+         id="g676"
+         transform="translate(22.410297,-66.079772)"
+         style="fill:#17917e;fill-opacity:1">
+        <text
+           xml:space="preserve"
+           style="font-size:10.5833px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.264583;fill:#17917e;fill-opacity:1"
+           x="-68.187553"
+           y="102.13761"
+           id="text653"><tspan
+             sodipodi:role="line"
+             id="tspan651"
+             x="-68.187553"
+             y="102.13761"
+             style="stroke-width:0.264583;fill:#17917e;fill-opacity:1">margin =</tspan></text>
+        <g
+           id="g667"
+           style="fill:#17917e;fill-opacity:1">
+          <text
+             xml:space="preserve"
+             style="font-size:10.5833px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.264583;fill:#17917e;fill-opacity:1"
+             x="-10.91991"
+             y="96.222771"
+             id="text657"><tspan
+               sodipodi:role="line"
+               id="tspan655"
+               x="-10.91991"
+               y="96.222771"
+               style="stroke-width:0.264583;fill:#17917e;fill-opacity:1">½ * section + extra </tspan></text>
+          <text
+             xml:space="preserve"
+             style="font-size:10.5833px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.264583;fill:#17917e;fill-opacity:1"
+             x="22.357021"
+             y="110.104"
+             id="text661"><tspan
+               sodipodi:role="line"
+               id="tspan659"
+               x="22.357021"
+               y="110.104"
+               style="stroke-width:0.264583;fill:#17917e;fill-opacity:1">tan ½α</tspan></text>
+        </g>
+      </g>
+      <path
+         style="fill:none;stroke:#17917e;stroke-width:1.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 12.011568,33.176901 H 119.15684"
+         id="path1503" />
     </g>
   </g>
 </svg>

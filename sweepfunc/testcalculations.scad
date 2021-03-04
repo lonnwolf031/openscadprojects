@@ -1,6 +1,48 @@
 polyline = [[0,0,0],[2,2,2],[6,4,8],[10,12,14]];
 t=3;
 
+lnelemTemp = 0;
+
+section = 10;
+extra_space = 0.25*section;
+ // margin will be defined later based on angle
+margin = 0;
+
+numpoints = len(polyline);
+
+for (n =[0:numpoints-1]) {
+  // if not first point, because at P0 there is nothing to do
+    if(n != 0) {
+      // at P1 (and if larger than 1 polyline) and further there are rotates
+      if(n >= 1 && numpoints > 2)
+      {
+        //translate([polyline[n][x],[polyline[n][y],[polyline[n][z])
+        //rotate()
+
+        //translate and rotate
+        // rotate extrude
+      }
+
+      // LINEAR EXTRUDE HERE
+      if(numpoints == 2) {
+          // from polyline at n linear extrude until [1]
+      }
+
+      if(n>=2 && n < numpoints-1) {
+
+      }
+      if(n == numpoints-1) {
+          //linear extrude until last point
+      }
+      prevlnelem = lnelem;
+  }
+
+}
+
+module shape() {
+    square(size = [2, 2], center = true);
+}
+
 function dirvx([x0,y0,z0], [x1,y1,z1]) = x1-x0; //replace polyline... by x1 and x0
 function dirvy([x0,y0,z0], [x1,y1,z1]) = y1-y0;
 function dirvz([x0,y0,z0], [x1,y1,z1]) = z1-z0;
@@ -47,18 +89,18 @@ lnxcomp = abs(x1-x0);
 lnycomp = abs(y1-y0);
 lnzcomp = abs(z1-z0);
 
-function lnRotatePtVct([x0,y0,z0], [x1,y1,z1]) = (0.5*section+extra) / sin(0.5*theta([x0,y0,z0], [x1,y1,z1]));
+function lnPolyPtVct([x0,y0,z0], [x1,y1,z1]) = (0.5*section+extra) / sin(0.5*theta([x0,y0,z0], [x1,y1,z1]));
 
-function anglRotatePointXaxis([x0,y0,z0], [x1,y1,z1]) = anglexaxis([x0,y0,z0], [x1,y1,z1]) + theta([x0,y0,z0], [x1,y1,z1]) - 180;
-function anglRotatePointYaxis([x0,y0,z0], [x1,y1,z1]) = angleyaxis([x0,y0,z0], [x1,y1,z1]) + theta([x0,y0,z0], [x1,y1,z1]) - 180;
-function anglRotatePointZaxis([x0,y0,z0], [x1,y1,z1]) = anglezaxis([x0,y0,z0], [x1,y1,z1]) + theta([x0,y0,z0], [x1,y1,z1]) - 180;
+function anglPolyPointXaxis([x0,y0,z0], [x1,y1,z1]) = anglexaxis([x0,y0,z0], [x1,y1,z1]) + theta([x0,y0,z0], [x1,y1,z1]) - 180;
+function anglPolyPointYaxis([x0,y0,z0], [x1,y1,z1]) = angleyaxis([x0,y0,z0], [x1,y1,z1]) + theta([x0,y0,z0], [x1,y1,z1]) - 180;
+function anglPolyPointZaxis([x0,y0,z0], [x1,y1,z1]) = anglezaxis([x0,y0,z0], [x1,y1,z1]) + theta([x0,y0,z0], [x1,y1,z1]) - 180;
 
-function xcompRotVector([x0,y0,z0], [x1,y1,z1]) = lnRotatePtVct([x0,y0,z0], [x1,y1,z1]) * cos(anglRotatePointXaxis([x0,y0,z0], [x1,y1,z1]));
-function ycompRotVector([x0,y0,z0], [x1,y1,z1]) = lnRotatePtVct([x0,y0,z0], [x1,y1,z1]) * cos(anglRotatePointYaxis([x0,y0,z0], [x1,y1,z1]));
-function zcompRotVector([x0,y0,z0], [x1,y1,z1]) = lnRotatePtVct([x0,y0,z0], [x1,y1,z1]) * cos(anglRotatePointZaxis([x0,y0,z0], [x1,y1,z1]));
+function xcompVector([x0,y0,z0], [x1,y1,z1]) = lnPolyPtVct([x0,y0,z0], [x1,y1,z1]) * cos(anglPolyPointXaxis([x0,y0,z0], [x1,y1,z1]));
+function ycompVector([x0,y0,z0], [x1,y1,z1]) = lnPolyPtVct([x0,y0,z0], [x1,y1,z1]) * cos(anglPolyPointYaxis([x0,y0,z0], [x1,y1,z1]));
+function zcompVector([x0,y0,z0], [x1,y1,z1]) = lnPolyPtVct([x0,y0,z0], [x1,y1,z1]) * cos(anglPolyPointZaxis([x0,y0,z0], [x1,y1,z1]));
 
-function xcoordProtate([x0,y0,z0], [x1,y1,z1]) = xcompRotVector([x0,y0,z0], [x1,y1,z1]) + x0;
-function ycoordProtate([x0,y0,z0], [x1,y1,z1]) = ycompRotVector([x0,y0,z0], [x1,y1,z1]) + y0;
-function zcoordProtate([x0,y0,z0], [x1,y1,z1]) = zcompRotVector([x0,y0,z0], [x1,y1,z1]) + z0;
+function xcoordProtate([x0,y0,z0], [x1,y1,z1]) = xcompVector([x0,y0,z0], [x1,y1,z1]) + x0;
+function ycoordProtate([x0,y0,z0], [x1,y1,z1]) = ycompVector([x0,y0,z0], [x1,y1,z1]) + y0;
+function zcoordProtate([x0,y0,z0], [x1,y1,z1]) = zcompVector([x0,y0,z0], [x1,y1,z1]) + z0;
 
 // end of extrude - margin - translate from P to projection of margin (length) to x, y, z
