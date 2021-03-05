@@ -14,9 +14,9 @@ for (n =[0:numpoints-1]) {
   // if not first point, because at P0 there is nothing to do
     if(n != 0) {
       // at P1 (and if larger than 1 polyline) and further there are rotates
-      if(n >= 1 && numpoints > 2)
+      if(n >= 1 && numpoints >= 2)
       {
-        //translate([polyline[n][x],[polyline[n][y],[polyline[n][z])
+        translate(xcoordProtate([x0,y0,z0], [x1,y1,z1]),ycoordProtate([x0,y0,z0], [x1,y1,z1]),zcoordProtate([x0,y0,z0], [x1,y1,z1]))
         //rotate()
 
         //translate and rotate
@@ -71,7 +71,7 @@ function anglexaxis([x0,y0,z0], [x1,y1,z1])  = arccos((abs(x1-x0)/lnelem([x0,y0,
 function angleyaxis([x0,y0,z0], [x1,y1,z1])  = arccos((abs(y1-y0)/lnelem([x0,y0,z0], [x1,y1,z1]) );
 function anglezaxis([x0,y0,z0], [x1,y1,z1])  = arccos((abs(z1-x0)/lnelem([x0,y0,z0], [x1,y1,z1]) );
 
-// calc angle between vectors
+// calc angle between vectors, 0 being n, 1 being n+1
 function theta([x0,y0,z0], [x1,y1,z1]) = acos((x1 * x0 +
 y1 * y0 +
 z1 * z0)
@@ -89,6 +89,7 @@ lnxcomp = abs(x1-x0);
 lnycomp = abs(y1-y0);
 lnzcomp = abs(z1-z0);
 
+// functions for rotate vector where x,y,z 0 = n-1, x,y,z 1 = n
 function lnPolyPtVct([x0,y0,z0], [x1,y1,z1]) = (0.5*section+extra) / sin(0.5*theta([x0,y0,z0], [x1,y1,z1]));
 
 function anglPolyPointXaxis([x0,y0,z0], [x1,y1,z1]) = anglexaxis([x0,y0,z0], [x1,y1,z1]) + theta([x0,y0,z0], [x1,y1,z1]) - 180;
