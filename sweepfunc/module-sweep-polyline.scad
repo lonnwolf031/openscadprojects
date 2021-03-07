@@ -16,11 +16,14 @@ for (n =[0:numpoints-1]) {
       // at P1 (and if larger than 1 polyline) and further there are rotates
       if(n >= 1 && numpoints >= 2)
       {
-        translate(xcoordProtate([x0,y0,z0], [x1,y1,z1]),ycoordProtate([x0,y0,z0], [x1,y1,z1]),zcoordProtate([x0,y0,z0], [x1,y1,z1]))
+        translate(xcoordProtate([polyline[n-1][x],polyline[n-1][y],polyline[n-1][z]],[polyline[n][x],polyline[n][y],polyline[n][z]]),
+          ycoordProtate([polyline[n-1][x],polyline[n-1][y],polyline[n-1][z]], [polyline[n][x],polyline[n][y],polyline[n][z]]),
+          zcoordProtate([polyline[n-1][x],polyline[n-1][y],polyline[n-1][z]], [polyline[n][x],polyline[n][y],polyline[n][z]]))
         //rotate()
 
         //translate and rotate
         // rotate extrude
+        // end of extrude - margin - translate from P to projection of margin (length) to x, y, z
       }
 
       // LINEAR EXTRUDE HERE
@@ -76,18 +79,18 @@ function lnycomp([x0,y0,z0], [x1,y1,z1]) = abs(y1-y0);
 function lnzcomp([x0,y0,z0], [x1,y1,z1]) = abs(z1-z0);
 
 // calc angle between vectors, 0 being n, 1 being n+1
-function theta(polySegmentUntilN, polySegmentFromN) = acos(
-(lnxcomp(polySegmentFromN[n][x]) * lnxcomp(polySegmentToN[n][x]) +
-lnycomp(polySegmentFromN[n][y]) * lnycomp(polySegmentToN[n][y]) +
-lnzcomp(polySegmentFromN[n][z]) * lnzcomp(polySegmentToN[n][z]))
+function theta([polySegmentUntilNx,polySegmentUntilNy,polySegmentUntilNz], [polySegmentFromNx,polySegmentFromNy,polySegmentFromNz]) = acos(
+(lnxcomp(polySegmentFromNx) * lnxcomp(polySegmentToNx) +
+lnycomp(polySegmentFromNy) * lnycomp(polySegmentToNy) +
+lnzcomp(polySegmentFromNz) * lnzcomp(polySegmentToNz))
 / ( (abs(sqrt(
-      pow(abs(lnxcomp(polySegmentToN[n][x])),2)+
-      pow(abs(lnycomp(polySegmentToN[n][y])),2)+
-      pow(abs(lnzcomp(polySegmentToN[n][z])),2)))*
+      pow(abs(lnxcomp(polySegmentToNx)),2)+
+      pow(abs(lnycomp(polySegmentToNy)),2)+
+      pow(abs(lnzcomp(polySegmentToNz)),2)))*
     abs(sqrt(
-      pow(abs(lnxcomp(polySegmentFromN[n][x])),2)+
-      pow(abs(lnycomp(polySegmentFromN[n][y])),2)+
-      pow(abs(lnzcomp(polySegmentFromN[n][z])),2))
+      pow(abs(lnxcomp(polySegmentFromNx)),2)+
+      pow(abs(lnycomp(polySegmentFromNy)),2)+
+      pow(abs(lnzcomp(polySegmentFromNz)),2))
 ))));
 
 
@@ -106,5 +109,3 @@ function zcompRotationVector([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent
 function xcoordProtate([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent]) = xcompVector([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent]) + xPrevious;
 function ycoordProtate([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent]) = ycompRotationVector([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent]) + yPrevious;
 function zcoordProtate([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent]) = zcompRotationVector([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent]) + zPrevious;
-
-// end of extrude - margin - translate from P to projection of margin (length) to x, y, z
