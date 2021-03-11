@@ -96,16 +96,17 @@ lnzcomp(polySegmentFromNz) * lnzcomp(polySegmentToNz))
 
 
 // functions for rotate vector where x,y,z 0 = n-1, x,y,z 1 = n
-function lnRotationPointVector([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent]) = (0.5*section+extra) / sin(0.5*theta([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent]));
+function lnRotationPointVector([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])) = (0.5*section+extra) / sin(0.5*theta([xCurrent,yCurrent,zCurrent],[xNext,yNext,zNext])));
 
-function anglPolylineSegmentXaxis([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent]) = anglexaxis([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent]) + theta([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent]) - 180;
-function anglPolylineSegmentYaxis([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent]) = angleyaxis([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent]) + theta([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent]) - 180;
-function anglPolylineSegmentZaxis([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent]) = anglezaxis([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent]) + theta([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent]) - 180;
+function anglPolylineSegmentXaxis([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]) = anglexaxis([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent]) + theta([xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]) - 180;
+function anglPolylineSegmentYaxis([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]) = angleyaxis([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent]) + theta([xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]) - 180;
+function anglPolylineSegmentZaxis([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]) = anglezaxis([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent]) + theta([xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]) - 180;
 
-function xcompRotationVector([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent]) = lnRotationPointVector([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent]) * cos(anglPolylineSegmentXaxis([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent]));
-function ycompRotationVector([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent]) = lnRotationPointVector([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent]) * cos(anglPolylineSegmentYaxis([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent]));
-function zcompRotationVector([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent]) = lnRotationPointVector([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent]) * cos(anglPolylineSegmentZaxis([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent]));
+function xcompRotationVector([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])) = lnRotationPointVector([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent]) * cos(anglPolylineSegmentXaxis([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])));
+function ycompRotationVector([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])) = lnRotationPointVector([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent]) * cos(anglPolylineSegmentYaxis([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])));
+function zcompRotationVector([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])) = lnRotationPointVector([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent]) * cos(anglPolylineSegmentZaxis([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])));
 
-function xcoordProtate([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent]) = xcompVector([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent]) + xPrevious;
-function ycoordProtate([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent]) = ycompRotationVector([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent]) + yPrevious;
-function zcoordProtate([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent]) = zcompRotationVector([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent]) + zPrevious;
+//inkl xnext theta
+function xcoordProtate([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]) = xcompRotationVector([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])) + xPrevious;
+function ycoordProtate([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]) = ycompRotationVector([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])) + yPrevious;
+function zcoordProtate([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]) = zcompRotationVector([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])) + zPrevious;
