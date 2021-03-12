@@ -16,9 +16,9 @@ for (n =[0:numpoints-1]) {
       // at P1 (and if larger than 1 polyline) and further there are rotates
       if(n >= 1 && numpoints >= 2)
       {
-        translate(xcoordProtate([polyline[n-1][x],polyline[n-1][y],polyline[n-1][z]],[polyline[n][x],polyline[n][y],polyline[n][z]]),
-          ycoordProtate([polyline[n-1][x],polyline[n-1][y],polyline[n-1][z]], [polyline[n][x],polyline[n][y],polyline[n][z]]),
-          zcoordProtate([polyline[n-1][x],polyline[n-1][y],polyline[n-1][z]], [polyline[n][x],polyline[n][y],polyline[n][z]]))
+        translate(xcoordProtate([polyline[n-1][x],polyline[n-1][y],polyline[n-1][z]],[polyline[n][x],polyline[n][y],polyline[n][z]],[polyline[n+1][x],polyline[n+1][y],polyline[n+1][z]]),
+          ycoordProtate([polyline[n-1][x],polyline[n-1][y],polyline[n-1][z]], [polyline[n][x],polyline[n][y],polyline[n][z]],[polyline[n+1][x],polyline[n+1][y],polyline[n+1][z]),
+          zcoordProtate([polyline[n-1][x],polyline[n-1][y],polyline[n-1][z]], [polyline[n][x],polyline[n][y],polyline[n][z]],[polyline[n+1][x],polyline[n+1][y],polyline[n+1][z]))
         //rotate()
 
         //translate and rotate
@@ -70,6 +70,15 @@ function lnelem([x0,y0,z0], [x1,y1,z1]) = abs(
   )
 );
 
+// figure out how to divide this into x, y z components
+function rotateVectorProjOntoVect([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]) =
+  let (vecXrotate = xcoordProtate([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]))
+  let (vecYrotate = ycoordProtate([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]))
+  let (vecZrotate = zcoordProtate([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]))
+(dotproduct([xCurrent,yCurrent,zCurrent, [vecXrotate,vecYrotate,vecZrotate])/lnelem([x0,y0,z0], [x1,y1,z1])^2)*(xCurrent,yCurrent,zCurrent);
+
+function dotproduct([x0,y0,z0], [x1,y1,z1]) = x0 * x1 + y0 * y1 + z0 * z1;
+
 function anglexaxis([x0,y0,z0], [x1,y1,z1])  = arccos((abs(x1-x0)/lnelem([x0,y0,z0], [x1,y1,z1]) );
 function angleyaxis([x0,y0,z0], [x1,y1,z1])  = arccos((abs(y1-y0)/lnelem([x0,y0,z0], [x1,y1,z1]) );
 function anglezaxis([x0,y0,z0], [x1,y1,z1])  = arccos((abs(z1-x0)/lnelem([x0,y0,z0], [x1,y1,z1]) );
@@ -106,7 +115,6 @@ function xcompRotationVector([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent
 function ycompRotationVector([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])) = lnRotationPointVector([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent]) * cos(anglPolylineSegmentYaxis([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])));
 function zcompRotationVector([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])) = lnRotationPointVector([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent]) * cos(anglPolylineSegmentZaxis([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])));
 
-//inkl xnext theta
 function xcoordProtate([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]) = xcompRotationVector([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])) + xPrevious;
 function ycoordProtate([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]) = ycompRotationVector([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])) + yPrevious;
 function zcoordProtate([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]) = zcompRotationVector([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])) + zPrevious;
