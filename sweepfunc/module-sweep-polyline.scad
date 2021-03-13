@@ -19,7 +19,7 @@ for (n =[0:numpoints-1]) {
         translate(xcoordProtate([polyline[n-1][x],polyline[n-1][y],polyline[n-1][z]],[polyline[n][x],polyline[n][y],polyline[n][z]],[polyline[n+1][x],polyline[n+1][y],polyline[n+1][z]]),
           ycoordProtate([polyline[n-1][x],polyline[n-1][y],polyline[n-1][z]], [polyline[n][x],polyline[n][y],polyline[n][z]],[polyline[n+1][x],polyline[n+1][y],polyline[n+1][z]),
           zcoordProtate([polyline[n-1][x],polyline[n-1][y],polyline[n-1][z]], [polyline[n][x],polyline[n][y],polyline[n][z]],[polyline[n+1][x],polyline[n+1][y],polyline[n+1][z]))
-        //rotate()
+        //rotate() anglPolylineSegmentXaxis etc for rotateVectorProjOntoVectZ
 
         //translate and rotate
         // rotate extrude
@@ -71,11 +71,21 @@ function lnelem([x0,y0,z0], [x1,y1,z1]) = abs(
 );
 
 // figure out how to divide this into x, y z components
-function rotateVectorProjOntoVect([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]) =
+function rotateScalarCompProjOntoVect([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]) =
   let (vecXrotate = xcoordProtate([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]))
   let (vecYrotate = ycoordProtate([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]))
   let (vecZrotate = zcoordProtate([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]))
-(dotproduct([xCurrent,yCurrent,zCurrent, [vecXrotate,vecYrotate,vecZrotate])/lnelem([x0,y0,z0], [x1,y1,z1])^2)*(xCurrent,yCurrent,zCurrent);
+(dotproduct([xCurrent,yCurrent,zCurrent, [vecXrotate,vecYrotate,vecZrotate])/lnelem([x0,y0,z0], [x1,y1,z1])^2);
+
+// to find location of vector minus margin
+function rotateVectorProjOntoVectX([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]) =
+rotateScalarCompProjOntoVect([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])*xCurrent;
+
+function rotateVectorProjOntoVectY([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]) =
+rotateScalarCompProjOntoVect([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])*yCurrent;
+
+function rotateVectorProjOntoVectZ([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]) =
+rotateScalarCompProjOntoVect([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])*zCurrent;
 
 function dotproduct([x0,y0,z0], [x1,y1,z1]) = x0 * x1 + y0 * y1 + z0 * z1;
 
