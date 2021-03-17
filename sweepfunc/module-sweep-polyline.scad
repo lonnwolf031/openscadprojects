@@ -13,13 +13,12 @@ for (n =[0:numpoints-1]) {
       if(n >= 1 && numpoints >= 2)
       {
         tempX = xcoordProtate([polyline[n-1][x],polyline[n-1][y],polyline[n-1][z]],[polyline[n][x],polyline[n][y],polyline[n][z]],[polyline[n+1][x],polyline[n+1][y],polyline[n+1][z]]);
-        tempY = ycoordProtate([polyline[n-1][x],polyline[n-1][y],polyline[n-1][z]], [polyline[n][x],polyline[n][y],polyline[n][z]],[polyline[n+1][x],polyline[n+1][y],polyline[n+1][z]);
-        tempZ = zcoordProtate([polyline[n-1][x],polyline[n-1][y],polyline[n-1][z]], [polyline[n][x],polyline[n][y],polyline[n][z]],[polyline[n+1][x],polyline[n+1][y],polyline[n+1][z]);
+        tempY = ycoordProtate([polyline[n-1][x],polyline[n-1][y],polyline[n-1][z]], [polyline[n][x],polyline[n][y],polyline[n][z]],[polyline[n+1][x],polyline[n+1][y],polyline[n+1][z]]);
+        tempZ = zcoordProtate([polyline[n-1][x],polyline[n-1][y],polyline[n-1][z]], [polyline[n][x],polyline[n][y],polyline[n][z]],[polyline[n+1][x],polyline[n+1][y],polyline[n+1][z]]);
         translate([tempX,tempY,tempZ])
         rotate([anglexaxis([tempX,tempY,tempZ], [polyline[n][x],polyline[n][y],polyline[n][z]]),
-        angleyaxis(([tempX,tempY,tempZ], [polyline[n][x],polyline[n][y],polyline[n][z]])),
-        anglezaxis(([tempX,tempY,tempZ], [polyline[n][x],polyline[n][y],polyline[n][z]]))])
-
+        angleyaxis([tempX,tempY,tempZ], [polyline[n][x],polyline[n][y],polyline[n][z]]),
+        anglezaxis([tempX,tempY,tempZ], [polyline[n][x],polyline[n][y],polyline[n][z]])])
         rotate_extrude(angle = theta([polyline[n-1][x],polyline[n-1][y],polyline[n-1][z]],[polyline[n][x],polyline[n][y],polyline[n][z]]))
         {shape();}
       }
@@ -29,9 +28,9 @@ for (n =[0:numpoints-1]) {
           // from polyline at n linear extrude until [1]
           translate([polyline[n][x],polyline[n][y],polyline[n][z]])
           /// rotate angles from things
-          rotate(anglexaxis([polyline[n][x],polyline[n][y],polyline[n][z]], [polyline[n+1][x],polyline[n+1][y],polyline[n+1][z]])
-        angleyaxis([polyline[n][x],polyline[n][y],polyline[n][z]], [polyline[n+1][x],polyline[n+1][y],polyline[n+1][z]])
-      anglezaxis([polyline[n][x],polyline[n][y],polyline[n][z]], [polyline[n+1][x],polyline[n+1][y],polyline[n+1][z]]))
+          rotate(anglexaxis([polyline[n][x],polyline[n][y],polyline[n][z]], [polyline[n+1][x],polyline[n+1][y],polyline[n+1][z]]),
+          angleyaxis([polyline[n][x],polyline[n][y],polyline[n][z]], [polyline[n+1][x],polyline[n+1][y],polyline[n+1][z]]),
+          anglezaxis([polyline[n][x],polyline[n][y],polyline[n][z]], [polyline[n+1][x],polyline[n+1][y],polyline[n+1][z]]))
 
           linear_extrude(height = lnelem([polyline[n][x],polyline[n][y],polyline[n][z]], [polyline[n+1][x],polyline[n+1][y],polyline[n+1][z]]), center = true)
           {shape();}
@@ -44,7 +43,9 @@ for (n =[0:numpoints-1]) {
         tempCoordMarginZ = rotateVectorProjOntoVectXBeginNext([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]);
         translate([tempCoordMarginX,tempCoordMarginY,tempCoordMarginZ])
         //rotate towards  n+1
-        rotate(anglexaxis([x0,y0,z0], [x1,y1,z1]),angleyaxis([x0,y0,z0], [x1,y1,z1]),anglezaxis([x0,y0,z0], [x1,y1,z1]))
+        rotate(anglexaxis([tempCoordMarginX,tempCoordMarginY,tempCoordMarginZ], [polyline[n][x],polyline[n][y],polyline[n][z]]),
+        angleyaxis([tempCoordMarginX,tempCoordMarginY,tempCoordMarginZ], [polyline[n][x],polyline[n][y],polyline[n][z]]),
+        anglezaxis([tempCoordMarginX,tempCoordMarginY,tempCoordMarginZ], [polyline[n][x],polyline[n][y],polyline[n][z]]))
         linear_extrude(height = (lnelem([polyline[n][x],polyline[n][y],polyline[n][z]], [polyline[n+1][x],polyline[n+1][y],polyline[n+1][z]]) - (2 * margin)), center = true)
         {shape();}
 
@@ -56,28 +57,11 @@ for (n =[0:numpoints-1]) {
           {shape();}
       }
   }
-
 }
 
 module shape() {
     square(size = [2, 2], center = true);
 }
-
-function dirvx([x0,y0,z0], [x1,y1,z1]) = x1-x0;
-function dirvy([x0,y0,z0], [x1,y1,z1]) = y1-y0;
-function dirvz([x0,y0,z0], [x1,y1,z1]) = z1-z0;
-
-function equationx(x) = x1 + dirvx * x;
-function equationy(y) = y1 + dirvy * y;
-function equationz(z) = z1 + dirvz * z;
-
-function partderiveqx(x) = dirvx;
-function partderiveqy(y) = dirvy;
-function partderiveqz(z) = dirvz;
-
-function symmeqxv([x0,y0,z0], [x1,y1,z1]) = (x - x0) / dirvx([x0,y0,z0], [x1,y1,z1]);
-function symmeqyv([x0,y0,z0], [x1,y1,z1]) = (y - y0) / dirvy([x0,y0,z0], [x1,y1,z1]);
-function symmeqzv([x0,y0,z0], [x1,y1,z1]) = (z - z0) / dirvz([x0,y0,z0], [x1,y1,z1]);
 
 function margin([polySegmentUntilNx,polySegmentUntilNy,polySegmentUntilNz], [polySegmentFromNx,polySegmentFromNy,polySegmentFromNz]) =
 (0.5 * section + extra_space) / tan(0.5 * theta([polySegmentUntilNx,polySegmentUntilNy,polySegmentUntilNz], [polySegmentFromNx,polySegmentFromNy,polySegmentFromNz]));
