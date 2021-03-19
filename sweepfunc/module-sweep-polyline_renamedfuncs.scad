@@ -11,16 +11,24 @@ numpoints = len(polyline);
 for (n =[0:numpoints-1]) {
   // if not first point, because at P0 there is nothing to do
 
-  // check if three value list
+
   pCur = polyline[n];
   if(n >= 1) {
     pPrev = polyline[n-1];
+  } else {
+    pPrev = [];
   }
-  if(n < numpoints) {
-    pNext = polyline[n+1];
+  if(n < (numpoints - 1)) {
+    pNext = polyline[n+1];  
+  } else {
+    pNext = []; 
   }
-
-  if ((len(pPrev) == 3 || n<1) && len(pCur) == 3 && (len(pNext) == 3 || n == numpoints)) {
+ echo(str(pPrev));
+ //echo(str(len(pNext))); 
+//echo(str(len(pNext) == 3 ));
+  
+   // check if three value lists
+  if ((len(pPrev) == 3 || n<1) && len(pCur) == 3 && (len(pNext) == 3 || n == (numpoints-1))) {
     if(n != 0) {
       // at P1 (and if larger than 1 polyline) and further there are rotate extrudes
       if(n >= 1 && numpoints >= 2)
