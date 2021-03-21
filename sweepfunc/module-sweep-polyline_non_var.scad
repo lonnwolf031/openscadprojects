@@ -1,80 +1,80 @@
 polyline = [[0,0,0],[2,2,2],[6,4,8],[10,12,14]];
 
-section = 10;
+section = 1;
 extra_space = 0.25*section;
 
 numpoints = len(polyline);
 
 // LINEAR EXTRUDE HERE
 if(numpoints == 2) {
-  pCur = polyline[n];
-  pNext = polyline[n+1];
     // from polyline at n linear extrude until [1]
-    translate(pCur)
+    translate(polyline[n])
     /// rotate angles from things
-    rotate(anglexaxis(pCur, pNext),
-    angleyaxis(pCur, pNext),
-    anglezaxis(pCur, pNext))
-
-    linear_extrude(height = lnelem(pCur, pNext), center = true)
+    rotate(anglexaxis(polyline[n], polyline[n+1]),
+    angleyaxis(polyline[n], polyline[n+1]),
+    anglezaxis(polyline[n], polyline[n+1]))
+    linear_extrude(height = lnelem(polyline[n], polyline[n+1]), center = true)
     shape();
 }
 
 for (n =[0:numpoints-1]) {
   // if not first point, because at P0 there is nothing to do
 
-pPrev = polyline[n-1];
-pCur = polyline[n];
-pNext = polyline[n+1];
-echo(str(polyline[n] == 3));
 
-if(len(polyline[n] == 3)) {
-   // check if three value lists
-//  if ((len(pPrev) == 3 || n<1) && len(pCur) == 3 && (len(pNext) == 3 || n == (numpoints-1))) {
-    if(n != 0) {
-      // at P1 (and if larger than 1 polyline) and further there are rotate extrudes
-      if(n >= 1 && numpoints >= 2)
-      {
-        tempX = xcoordProtate(pPrev, pCur, pNext);
-        tempY = ycoordProtate(pPrev, pCur, pNext);
-        tempZ = zcoordProtate(pPrev, pCur, pNext);
-        translate([tempX,tempY,tempZ])
-        rotate([anglexaxis([tempX,tempY,tempZ], pCur),
-        angleyaxis([tempX,tempY,tempZ], pCur),
-        anglezaxis([tempX,tempY,tempZ], pCur)])
-        rotate_extrude(angle = theta(pPrev,pCur))
-        shape();
-      }
-
-
-
-      if(n>=2 && n < numpoints-1) {
-        // translate to margin
-        tempCoordMarginX = rotateVectorProjOntoVectXBeginNext(pPrev, pCur, pNext);
-        tempCoordMarginY = rotateVectorProjOntoVectXBeginNext(pPrev, pCur, pNext);
-        tempCoordMarginZ = rotateVectorProjOntoVectXBeginNext(pPrev, pCur, pNext);
-        translate([tempCoordMarginX,tempCoordMarginY,tempCoordMarginZ])
-        //rotate towards  n+1
-        rotate(anglexaxis([tempCoordMarginX,tempCoordMarginY,tempCoordMarginZ], pCur),
-        angleyaxis([tempCoordMarginX,tempCoordMarginY,tempCoordMarginZ], pCur),
-        anglezaxis([tempCoordMarginX,tempCoordMarginY,tempCoordMarginZ], pCur))
-        linear_extrude(height = (lnelem(pCur, pNext) - (2 * margin)), center = true)
-        shape();
-
-      }
-      if(n == numpoints-1) {
-          //linear extrude until last point
-          //translate and rotate
-          linear_extrude(height = (lnelem(pCur, pNext) - margin), center = true)
-          shape();
-      }
+  if(n != 0) {
+    // at P1 (and if larger than 1 polyline) and further there are rotate extrudes
+    if(n >= 1 && numpoints >= 2 && n < (numpoints - 1))
+    {
+        rotateExtrMidPolyline(polyline[n-1], polyline[n], polyline[n+1]);
     }
-  //}
+    if(n>=2 && n < numpoints-1) {
+        linearExtrMidPolyline(polyline[n-1], polyline[n], polyline[n+1]) ;
+
+    }
+    if(n == numpoints-1) {
+        linearExtrLatest(polyline[n], polyline[n+1]);
+    }
+  }
+
 }
+
+module rotateExtrMidPolyline(pPrev, pCur, pNext) {
+  tempX = xcoordProtate(pPrev, pCur, pNext);
+  tempY = ycoordProtate(pPrev, pCur, pNext);
+  tempZ = zcoordProtate(pPrev, pCur, pNext);
+  translate([tempX,tempY,tempZ])
+  rotate([anglexaxis([tempX,tempY,tempZ], pCur),
+  angleyaxis([tempX,tempY,tempZ], pCur),
+  anglezaxis([tempX,tempY,tempZ], pCur)])
+  rotate_extrude(angle = theta(pPrev,pCur))
+  shape();
+}
+
+
+module linearExtrMidPolyline(pPrev, pCur, pNext) {
+  // translate to margin
+  tempCoordMarginX = rotateVectorProjOntoVectXBeginNext(pPrev, pCur, pNext);
+  tempCoordMarginY = rotateVectorProjOntoVectXBeginNext(pPrev, pCur, pNext);
+  tempCoordMarginZ = rotateVectorProjOntoVectXBeginNext(pPrev, pCur, pNext);
+  translate([tempCoordMarginX,tempCoordMarginY,tempCoordMarginZ])
+  //rotate towards  n+1
+  rotate(anglexaxis([tempCoordMarginX,tempCoordMarginY,tempCoordMarginZ], pCur),
+  angleyaxis([tempCoordMarginX,tempCoordMarginY,tempCoordMarginZ], pCur),
+  anglezaxis([tempCoordMarginX,tempCoordMarginY,tempCoordMarginZ], pCur))
+  linear_extrude(height = (lnelem(pCur, pNext) - (2 * margin)), center = true)
+  shape();
+}
+
+
+module linearExtrLatest(pCur, pNext) {
+  //linear extrude until last point
+  //translate and rotate
+  linear_extrude(height = (lnelem(pCur, pNext) - margin), center = true)
+  shape();
 }
 
 module shape() {
-    square(size = [2, 2], center = true);
+    square(size = [section, section], center = true);
 }
 
 // every argument is an [x,y,z] vector
@@ -175,10 +175,20 @@ abs(y1-y0);
 
 function lnzcomp(p0, p1) =
 let (x0 = p0[0]) let (x1 = p1[0]) let (y0 = p0[1]) let (y1 = p1[1]) let (z0 = p0[2]) let (z1 = p1[2])
+// undef
 abs(z1-z0);
 
 
 function theta(polySegmentUntilN, polySegmentFromN) =
+/* weird flex:
+ECHO: "[0, 0, 0]"
+ECHO: "[2, 2, 2]"
+ECHO: "[6, 4, 8]"
+ECHO: "8"
+*/
+//assert(true, "boo")
+//assert(true, str(polySegmentFromN))
+//assert(false, str(polySegmentFromN))
 let (polySegmentUntilNx = polySegmentUntilN[0]) let (polySegmentUntilNy = polySegmentUntilN[1]) let (polySegmentUntilNz = polySegmentUntilN[2])
 let (polySegmentFromNx = polySegmentFromN[0]) let (polySegmentFromNy = polySegmentFromN[1]) let (polySegmentFromNz = polySegmentFromN[2])
 acos(
