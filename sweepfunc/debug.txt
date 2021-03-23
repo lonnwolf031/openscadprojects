@@ -1,0 +1,1240 @@
+Parsing design (AST generation)...
+Compiling design (CSG Tree generation)...
+ECHO: "[2, 2, 2]"
+WARNING: cos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 235
+ECHO: "[2, 2, 2]"
+WARNING: sin() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 211
+ECHO: "[2, 2, 2]"
+WARNING: cos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 241
+ECHO: "[2, 2, 2]"
+WARNING: sin() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 211
+ECHO: "[2, 2, 2]"
+WARNING: cos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 247
+ECHO: "[2, 2, 2]"
+WARNING: sin() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 211
+WARNING: Unable to convert translate([undef, undef, undef]) parameter to a vec3 or vec2 of numbers, in file module-sweep-polyline_non_var.scad, line 45
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 92
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 92
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 91
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 91
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 90
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 90
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 89
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 88
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 156
+WARNING: acos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 156
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 92
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 92
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 91
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 91
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 90
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 90
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 89
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 88
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 160
+WARNING: acos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 160
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 92
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 92
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 91
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 91
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 90
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 90
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 89
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 88
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 164
+WARNING: acos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 164
+WARNING: Problem converting rotate(a=[undef, undef, undef]) parameter, in file module-sweep-polyline_non_var.scad, line 46
+ECHO: "[0, 0, 0]"
+ECHO: "[6, 4, 8]"
+WARNING: cos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 235
+ECHO: "[6, 4, 8]"
+WARNING: sin() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 211
+ECHO: "[6, 4, 8]"
+WARNING: cos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 241
+ECHO: "[6, 4, 8]"
+WARNING: sin() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 211
+ECHO: "[6, 4, 8]"
+WARNING: cos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 247
+ECHO: "[6, 4, 8]"
+WARNING: sin() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 211
+WARNING: Unable to convert translate([undef, undef, undef]) parameter to a vec3 or vec2 of numbers, in file module-sweep-polyline_non_var.scad, line 45
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 92
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 92
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 91
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 91
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 90
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 90
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 89
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 88
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 156
+WARNING: acos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 156
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 92
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 92
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 91
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 91
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 90
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 90
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 89
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 88
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 160
+WARNING: acos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 160
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 92
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 92
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 91
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 91
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 90
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 90
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 89
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 88
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 164
+WARNING: acos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 164
+WARNING: Problem converting rotate(a=[undef, undef, undef]) parameter, in file module-sweep-polyline_non_var.scad, line 46
+ECHO: "[2, 2, 2]"
+ECHO: "[6, 4, 8]"
+WARNING: cos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 235
+ECHO: "[6, 4, 8]"
+WARNING: sin() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 211
+ECHO: "[6, 4, 8]"
+WARNING: cos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 241
+ECHO: "[6, 4, 8]"
+WARNING: sin() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 211
+ECHO: "[6, 4, 8]"
+WARNING: cos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 247
+ECHO: "[6, 4, 8]"
+WARNING: sin() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 211
+ECHO: "[6, 4, 8]"
+WARNING: cos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 235
+ECHO: "[6, 4, 8]"
+WARNING: sin() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 211
+ECHO: "[6, 4, 8]"
+WARNING: cos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 241
+ECHO: "[6, 4, 8]"
+WARNING: sin() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 211
+ECHO: "[6, 4, 8]"
+WARNING: cos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 247
+ECHO: "[6, 4, 8]"
+WARNING: sin() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 211
+ECHO: "[6, 4, 8]"
+WARNING: cos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 235
+ECHO: "[6, 4, 8]"
+WARNING: sin() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 211
+ECHO: "[6, 4, 8]"
+WARNING: cos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 241
+ECHO: "[6, 4, 8]"
+WARNING: sin() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 211
+ECHO: "[6, 4, 8]"
+WARNING: cos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 247
+ECHO: "[6, 4, 8]"
+WARNING: sin() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 211
+WARNING: Unable to convert translate([undef, undef, undef]) parameter to a vec3 or vec2 of numbers, in file module-sweep-polyline_non_var.scad, line 59
+WARNING: Too many unnamed arguments supplied, in file module-sweep-polyline_non_var.scad, line 61
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 92
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 92
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 91
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 91
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 90
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 90
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 89
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 88
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 160
+WARNING: acos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 160
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 92
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 92
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 91
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 91
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 90
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 90
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 89
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 88
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 156
+WARNING: acos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 156
+WARNING: Problem converting rotate(a=undef) parameter, in file module-sweep-polyline_non_var.scad, line 61
+WARNING: Ignoring unknown variable 'margin', in file module-sweep-polyline_non_var.scad, line 64.
+WARNING: Ignoring unknown variable 'margin', in file module-sweep-polyline_non_var.scad, line 72.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 92
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 92
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 91
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 91
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 90
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 90
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 89
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 88
+WARNING: Ignoring unknown variable 'polySegmentUntilN', in file module-sweep-polyline_non_var.scad, line 188.
+WARNING: Ignoring unknown variable 'polySegmentUntilN', in file module-sweep-polyline_non_var.scad, line 188.
+WARNING: Ignoring unknown variable 'polySegmentUntilN', in file module-sweep-polyline_non_var.scad, line 188.
+WARNING: Ignoring unknown variable 'polySegmentFromN', in file module-sweep-polyline_non_var.scad, line 189.
+WARNING: Ignoring unknown variable 'polySegmentFromN', in file module-sweep-polyline_non_var.scad, line 189.
+WARNING: Ignoring unknown variable 'polySegmentFromN', in file module-sweep-polyline_non_var.scad, line 189.
+WARNING: Ignoring unknown module 'acos', in file module-sweep-polyline_non_var.scad, line 190.
+Compiling design (CSG Products generation)...
+Geometries in cache: 3
+Geometry cache size in bytes: 1160
+CGAL Polyhedrons in cache: 0
+CGAL cache size in bytes: 0
+Compiling design (CSG Products normalization)...
+Normalized CSG tree has 2 elements
+Compile and preview finished.
+Total rendering time: 0 hours, 0 minutes, 2 seconds
+in file module-sweep-polyline_non_var.scad, line 91
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 90
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 90
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 89
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 88
+WARNING: Ignoring unknown variable 'polySegmentUntilN', in file module-sweep-polyline_non_var.scad, line 188.
+WARNING: Ignoring unknown variable 'polySegmentUntilN', in file module-sweep-polyline_non_var.scad, line 188.
+WARNING: Ignoring unknown variable 'polySegmentUntilN', in file module-sweep-polyline_non_var.scad, line 188.
+WARNING: Ignoring unknown variable 'polySegmentFromN', in file module-sweep-polyline_non_var.scad, line 189.
+WARNING: Ignoring unknown variable 'polySegmentFromN', in file module-sweep-polyline_non_var.scad, line 189.
+WARNING: Ignoring unknown variable 'polySegmentFromN', in file module-sweep-polyline_non_var.scad, line 189.
+WARNING: Ignoring unknown module 'acos', in file module-sweep-polyline_non_var.scad, line 190.
+Compiling design (CSG Products generation)...
+Geometries in cache: 3
+Geometry cache size in bytes: 1160
+CGAL Polyhedrons in cache: 0
+CGAL cache size in bytes: 0
+Compiling design (CSG Products normalization)...
+Normalized CSG tree has 2 elements
+Compile and preview finished.
+Total rendering time: 0 hours, 0 minutes, 2 seconds
+RNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 196.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 195.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 193.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 192.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 191.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: acos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 190
+WARNING: Ignoring unknown function 'arccos', in file module-sweep-polyline_non_var.scad, line 165.
+WARNING: cos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 247
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 197.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 196.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 195.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 193.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 192.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 191.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: acos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 190
+WARNING: sin() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 211
+WARNING: Unable to convert translate([undef, undef, undef]) parameter to a vec3 or vec2 of numbers, in file module-sweep-polyline_non_var.scad, line 45
+WARNING: Ignoring unknown function 'arccos', in file module-sweep-polyline_non_var.scad, line 157.
+WARNING: Ignoring unknown function 'arccos', in file module-sweep-polyline_non_var.scad, line 161.
+WARNING: Ignoring unknown function 'arccos', in file module-sweep-polyline_non_var.scad, line 165.
+WARNING: Problem converting rotate(a=[undef, undef, undef]) parameter, in file module-sweep-polyline_non_var.scad, line 46
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 197.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 196.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 195.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 193.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 192.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 191.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: acos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 190
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 197.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 196.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 195.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 193.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 192.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 191.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: acos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 190
+WARNING: Ignoring unknown function 'arccos', in file module-sweep-polyline_non_var.scad, line 157.
+WARNING: cos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 235
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 197.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 196.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 195.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 193.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 192.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 191.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: acos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 190
+WARNING: sin() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 211
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 197.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 196.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 195.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 193.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 192.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 191.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: acos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 190
+WARNING: Ignoring unknown function 'arccos', in file module-sweep-polyline_non_var.scad, line 161.
+WARNING: cos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 241
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 197.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 196.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 195.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 193.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 192.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 191.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: acos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 190
+WARNING: sin() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 211
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 197.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 196.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 195.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 193.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 192.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 191.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: acos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 190
+WARNING: Ignoring unknown function 'arccos', in file module-sweep-polyline_non_var.scad, line 165.
+WARNING: cos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 247
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 197.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 196.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 195.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 193.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 192.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 191.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: acos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 190
+WARNING: sin() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 211
+WARNING: Unable to convert translate([undef, undef, undef]) parameter to a vec3 or vec2 of numbers, in file module-sweep-polyline_non_var.scad, line 45
+WARNING: Ignoring unknown function 'arccos', in file module-sweep-polyline_non_var.scad, line 157.
+WARNING: Ignoring unknown function 'arccos', in file module-sweep-polyline_non_var.scad, line 161.
+WARNING: Ignoring unknown function 'arccos', in file module-sweep-polyline_non_var.scad, line 165.
+WARNING: Problem converting rotate(a=[undef, undef, undef]) parameter, in file module-sweep-polyline_non_var.scad, line 46
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 197.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 196.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 195.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 193.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 192.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 191.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: acos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 190
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 197.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 196.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 195.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 193.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 192.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 191.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: acos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 190
+WARNING: Ignoring unknown function 'arccos', in file module-sweep-polyline_non_var.scad, line 157.
+WARNING: cos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 235
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 197.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 196.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 195.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 193.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 192.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 191.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: acos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 190
+WARNING: sin() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 211
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 197.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 196.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 195.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 193.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 192.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 191.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: acos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 190
+WARNING: Ignoring unknown function 'arccos', in file module-sweep-polyline_non_var.scad, line 161.
+WARNING: cos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 241
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 197.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 196.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 195.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 193.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 192.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 191.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: acos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 190
+WARNING: sin() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 211
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 197.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 196.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 195.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 193.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 192.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 191.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: acos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 190
+WARNING: Ignoring unknown function 'arccos', in file module-sweep-polyline_non_var.scad, line 165.
+WARNING: cos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 247
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 197.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 196.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 195.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 193.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 192.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 191.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: acos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 190
+WARNING: sin() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 211
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 197.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 196.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 195.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 193.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 192.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 191.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: acos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 190
+WARNING: Ignoring unknown function 'arccos', in file module-sweep-polyline_non_var.scad, line 157.
+WARNING: cos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 235
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 197.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 196.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 195.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 193.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 192.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 191.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: acos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 190
+WARNING: sin() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 211
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 197.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 196.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 195.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 193.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 192.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 191.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: acos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 190
+WARNING: Ignoring unknown function 'arccos', in file module-sweep-polyline_non_var.scad, line 161.
+WARNING: cos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 241
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 197.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 196.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 195.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 193.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 192.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 191.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: acos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 190
+WARNING: sin() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 211
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 197.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 196.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 195.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 193.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 192.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 191.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: acos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 190
+WARNING: Ignoring unknown function 'arccos', in file module-sweep-polyline_non_var.scad, line 165.
+WARNING: cos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 247
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 197.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 196.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 195.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 193.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 192.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 191.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: acos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 190
+WARNING: sin() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 211
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 197.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 196.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 195.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 193.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 192.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 191.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: acos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 190
+WARNING: Ignoring unknown function 'arccos', in file module-sweep-polyline_non_var.scad, line 157.
+WARNING: cos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 235
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 197.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 196.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 195.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 193.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 192.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 191.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: acos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 190
+WARNING: sin() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 211
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 197.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 196.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 195.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 193.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 192.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 191.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: acos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 190
+WARNING: Ignoring unknown function 'arccos', in file module-sweep-polyline_non_var.scad, line 161.
+WARNING: cos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 241
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 197.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 196.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 195.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 193.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 192.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 191.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: acos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 190
+WARNING: sin() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 211
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 197.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 196.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 195.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 193.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 192.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 191.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: acos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 190
+WARNING: Ignoring unknown function 'arccos', in file module-sweep-polyline_non_var.scad, line 165.
+WARNING: cos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 247
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 201
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 200
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 199
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 198
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 197.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 197
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 196.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 196
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 195.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 195
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 194
+WARNING: Ignoring unknown variable 'polySegmentToNz', in file module-sweep-polyline_non_var.scad, line 193.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 178
+WARNING: Ignoring unknown variable 'polySegmentToNy', in file module-sweep-polyline_non_var.scad, line 192.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 173
+WARNING: Ignoring unknown variable 'polySegmentToNx', in file module-sweep-polyline_non_var.scad, line 191.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 169
+WARNING: acos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 190
+WARNING: sin() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 211
+ECHO: "undef"
+WARNING: Unable to convert translate([undef, undef, undef]) parameter to a vec3 or vec2 of numbers, in file module-sweep-polyline_non_var.scad, line 60
+WARNING: Too many unnamed arguments supplied, in file module-sweep-polyline_non_var.scad, line 62
+WARNING: Ignoring unknown function 'arccos', in file module-sweep-polyline_non_var.scad, line 161.
+WARNING: Ignoring unknown function 'arccos', in file module-sweep-polyline_non_var.scad, line 157.
+WARNING: Problem converting rotate(a=undef) parameter, in file module-sweep-polyline_non_var.scad, line 62
+WARNING: Ignoring unknown variable 'margin', in file module-sweep-polyline_non_var.scad, line 65.
+WARNING: Ignoring unknown variable 'margin', in file module-sweep-polyline_non_var.scad, line 73.
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 93
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 93
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 92
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 92
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 91
+WARNING: pow() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 91
+WARNING: sqrt() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 90
+WARNING: abs() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 89
+Compiling design (CSG Products generation)...
+Geometries in cache: 3
+Geometry cache size in bytes: 1160
+CGAL Polyhedrons in cache: 0
+CGAL cache size in bytes: 0
+Compiling design (CSG Products normalization)...
+Normalized CSG tree has 2 elements
+Compile and preview finished.
+Total rendering time: 0 hours, 0 minutes, 19 seconds

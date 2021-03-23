@@ -117,37 +117,35 @@ function rotateVectorProjOntoVectXPreviousEnd(pPrevious, pCurrent, pNext) =
 let (xPrevious = pPrevious[0]) let (yPrevious = pPrevious[1]) let (zPrevious = pPrevious[2])
 let (xCurrent = pCurrent[0]) let (yCurrent = pCurrent[1]) let (zCurrent = pCurrent[2])
 let (xNext = pNext[0]) let (yNext = pNext[1]) let (zNext = pNext[2])
-rotateScalarCompProjOntoVect([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])*xCurrent;
+rotateScalarCompProjOntoVectPreviousEnd([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])*xCurrent;
 
 function rotateVectorProjOntoVectYPreviousEnd(pPrevious, pCurrent, pNext) =
 let (xPrevious = pPrevious[0]) let (yPrevious = pPrevious[1]) let (zPrevious = pPrevious[2])
 let (xCurrent = pCurrent[0]) let (yCurrent = pCurrent[1]) let (zCurrent = pCurrent[2])
 let (xNext = pNext[0]) let (yNext = pNext[1]) let (zNext = pNext[2])
-rotateScalarCompProjOntoVect([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])*yCurrent;
+rotateScalarCompProjOntoVectPreviousEnd([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])*yCurrent;
 
 function rotateVectorProjOntoVectZPreviousEnd(pPrevious, pCurrent, pNext) =
 let (xPrevious = pPrevious[0]) let (yPrevious = pPrevious[1]) let (zPrevious = pPrevious[2])
 let (xCurrent = pCurrent[0]) let (yCurrent = pCurrent[1]) let (zCurrent = pCurrent[2])
 let (xNext = pNext[0]) let (yNext = pNext[1]) let (zNext = pNext[2])
-rotateScalarCompProjOntoVect([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])*zCurrent;
+rotateScalarCompProjOntoVectPreviousEnd([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])*zCurrent;
 
 function rotateVectorProjOntoVectXBeginNext(pPrevious, pCurrent, pNext) =
-let (xPrevious = pPrevious[0]) let (yPrevious = pPrevious[1]) let (zPrevious = pPrevious[2])
-let (xCurrent = pCurrent[0]) let (yCurrent = pCurrent[1]) let (zCurrent = pCurrent[2])
-let (xNext = pNext[0]) let (yNext = pNext[1]) let (zNext = pNext[2])
-rotateScalarCompProjOntoVect([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])*xNext;
+let (xNext = pNext[0])
+rotateScalarCompProjOntoVectBeginNext(pPrevious, pCurrent, pNext)*xNext;
 
 function rotateVectorProjOntoVectYBeginNext(pPrevious, pCurrent, pNext) =
 let (xPrevious = pPrevious[0]) let (yPrevious = pPrevious[1]) let (zPrevious = pPrevious[2])
 let (xCurrent = pCurrent[0]) let (yCurrent = pCurrent[1]) let (zCurrent = pCurrent[2])
 let (xNext = pNext[0]) let (yNext = pNext[1]) let (zNext = pNext[2])
-rotateScalarCompProjOntoVect([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])*yNext;
+rotateScalarCompProjOntoVectBeginNext([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])*yNext;
 
 function rotateVectorProjOntoVectZBeginNext(pPrevious, pCurrent, pNext) =
 let (xPrevious = pPrevious[0]) let (yPrevious = pPrevious[1]) let (zPrevious = pPrevious[2])
 let (xCurrent = pCurrent[0]) let (yCurrent = pCurrent[1]) let (zCurrent = pCurrent[2])
 let (xNext = pNext[0]) let (yNext = pNext[1]) let (zNext = pNext[2])
-rotateScalarCompProjOntoVect([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])*zNext;
+rotateScalarCompProjOntoVectBeginNext([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])*zNext;
 
 function dotproduct(p0, p1) =
 let (x0 = p0[0]) let (x1 = p1[0]) let (y0 = p0[1]) let (y1 = p1[1]) let (z0 = p0[2]) let (z1 = p1[2])
@@ -155,15 +153,15 @@ x0 * x1 + y0 * y1 + z0 * z1;
 
 function anglexaxis(p0, p1)  =
 let (x0 = p0[0]) let (x1 = p1[0]) let (y0 = p0[1]) let (y1 = p1[1]) let (z0 = p0[2]) let (z1 = p1[2])
-arccos((abs(x1-x0)/lnelem(p0, p1)));
+acos(abs(x1-x0)/lnelem(p0, p1));
 
 function angleyaxis(p0, p1)  =
 let (x0 = p0[0]) let (x1 = p1[0]) let (y0 = p0[1]) let (y1 = p1[1]) let (z0 = p0[2]) let (z1 = p1[2])
-arccos((abs(y1-y0)/lnelem(p0, p1)));
+acos(abs(y1-y0)/lnelem(p0, p1));
 
 function anglezaxis(p0, p1)  =
 let (x0 = p0[0]) let (x1 = p1[0]) let (y0 = p0[1]) let (y1 = p1[1]) let (z0 = p0[2]) let (z1 = p1[2])
-arccos((abs(z1-x0)/lnelem(p0, p1)));
+acos(abs(z1-x0)/lnelem(p0, p1));
 
 function lnxcomp(p0, p1) =
 let (x0 = p0[0]) let (x1 = p1[0]) let (y0 = p0[1]) let (y1 = p1[1]) let (z0 = p0[2]) let (z1 = p1[2])
@@ -186,9 +184,7 @@ ECHO: "[2, 2, 2]"
 ECHO: "[6, 4, 8]"
 ECHO: "8"
 */
-//assert(true, "boo")
-//assert(true, str(polySegmentFromN))
-//assert(false, str(polySegmentFromN))
+echo(str(polySegmentUntilN));
 let (polySegmentUntilNx = polySegmentUntilN[0]) let (polySegmentUntilNy = polySegmentUntilN[1]) let (polySegmentUntilNz = polySegmentUntilN[2])
 let (polySegmentFromNx = polySegmentFromN[0]) let (polySegmentFromNy = polySegmentFromN[1]) let (polySegmentFromNz = polySegmentFromN[2])
 acos(

@@ -1,0 +1,7 @@
+WARNING: cos() parameter could not be converted, in file module-sweep-polyline_non_var.scad, line 235
+
+> cos from
+function anglPolylineSegmentXaxis(pPrevious, pCurrent, pNext)
+
+theta goes wrong
+test: theta(pCurrent, pNext)  : if current and next on one segment, no theta!
