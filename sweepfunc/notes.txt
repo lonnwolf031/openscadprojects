@@ -5,3 +5,26 @@ function anglPolylineSegmentXaxis(pPrevious, pCurrent, pNext)
 
 theta goes wrong
 test: theta(pCurrent, pNext)  : if current and next on one segment, no theta!
+
+
+// range is inclusive on both ends
+
+
+
+
+function theta(pPrevious, pCurrent, pNext) =
+echo(str(pNext))
+
+ECHO: "[6, 4, 8]"  next  @ n = 1
+
+ECHO: "[10, 12, 14]" next @ n = 2
+
+
+for (n =[0:numpoints-1]) {
+polyline[n+1])
+polyline = [[0,0,0],[2,2,2],[6,4,8],[10,12,14]];
+
+
+calls polyline[2] for first pNext, calls polyline[3] for second pNext
+So: [6,4,8],[10,12,14]
+BUT [2,2,2] should be in there too!
