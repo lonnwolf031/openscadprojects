@@ -1,72 +1,107 @@
 polyline = [[0,0,0],[2,2,2],[6,4,8],[10,12,14]];
-t=3;
 
-section = 10;
+section = 1;
 extra_space = 0.25*section;
 
 numpoints = len(polyline);
 
+// LINEAR EXTRUDE HERE
+if(numpoints == 2) {
+    // from polyline at n linear extrude until [1]
+    translate(polyline[n])
+    /// rotate angles from things
+    rotate([anglexaxis(polyline[n], polyline[n+1]),
+    angleyaxis(polyline[n], polyline[n+1]),
+    anglezaxis(polyline[n], polyline[n+1])])
+    linear_extrude(height = lnelem(polyline[n], polyline[n+1]), center = true)
+    shape();
+}
+
+// range is inclusive on both ends
 for (n =[0:numpoints-1]) {
   // if not first point, because at P0 there is nothing to do
-    if(n != 0) {
-      // at P1 (and if larger than 1 polyline) and further there are rotate extrudes
-      if(n >= 1 && numpoints >= 2)
-      {
-        tempX = xcoordProtate([polyline[n-1][x],polyline[n-1][y],polyline[n-1][z]],[polyline[n][x],polyline[n][y],polyline[n][z]],[polyline[n+1][x],polyline[n+1][y],polyline[n+1][z]]);
-        tempY = ycoordProtate([polyline[n-1][x],polyline[n-1][y],polyline[n-1][z]], [polyline[n][x],polyline[n][y],polyline[n][z]],[polyline[n+1][x],polyline[n+1][y],polyline[n+1][z]]);
-        tempZ = zcoordProtate([polyline[n-1][x],polyline[n-1][y],polyline[n-1][z]], [polyline[n][x],polyline[n][y],polyline[n][z]],[polyline[n+1][x],polyline[n+1][y],polyline[n+1][z]]);
-        translate([tempX,tempY,tempZ])
-        rotate([anglexaxis([tempX,tempY,tempZ], [polyline[n][x],polyline[n][y],polyline[n][z]]),
-        angleyaxis([tempX,tempY,tempZ], [polyline[n][x],polyline[n][y],polyline[n][z]]),
-        anglezaxis([tempX,tempY,tempZ], [polyline[n][x],polyline[n][y],polyline[n][z]])])
-        rotate_extrude(angle = theta([polyline[n-1][x],polyline[n-1][y],polyline[n-1][z]],[polyline[n][x],polyline[n][y],polyline[n][z]]))
-        {shape();}
-      }
 
-      // LINEAR EXTRUDE HERE
-      if(numpoints == 2) {
-          // from polyline at n linear extrude until [1]
-          translate([polyline[n][x],polyline[n][y],polyline[n][z]])
-          /// rotate angles from things
-          rotate(anglexaxis([polyline[n][x],polyline[n][y],polyline[n][z]], [polyline[n+1][x],polyline[n+1][y],polyline[n+1][z]]),
-          angleyaxis([polyline[n][x],polyline[n][y],polyline[n][z]], [polyline[n+1][x],polyline[n+1][y],polyline[n+1][z]]),
-          anglezaxis([polyline[n][x],polyline[n][y],polyline[n][z]], [polyline[n+1][x],polyline[n+1][y],polyline[n+1][z]]))
-
-          linear_extrude(height = lnelem([polyline[n][x],polyline[n][y],polyline[n][z]], [polyline[n+1][x],polyline[n+1][y],polyline[n+1][z]]), center = true)
-          {shape();}
-      }
-
-      if(n>=2 && n < numpoints-1) {
-        // translate to margin
-        tempCoordMarginX = rotateVectorProjOntoVectXBeginNext([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]);
-        tempCoordMarginY = rotateVectorProjOntoVectXBeginNext([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]);
-        tempCoordMarginZ = rotateVectorProjOntoVectXBeginNext([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]);
-        translate([tempCoordMarginX,tempCoordMarginY,tempCoordMarginZ])
-        //rotate towards  n+1
-        rotate(anglexaxis([tempCoordMarginX,tempCoordMarginY,tempCoordMarginZ], [polyline[n][x],polyline[n][y],polyline[n][z]]),
-        angleyaxis([tempCoordMarginX,tempCoordMarginY,tempCoordMarginZ], [polyline[n][x],polyline[n][y],polyline[n][z]]),
-        anglezaxis([tempCoordMarginX,tempCoordMarginY,tempCoordMarginZ], [polyline[n][x],polyline[n][y],polyline[n][z]]))
-        linear_extrude(height = (lnelem([polyline[n][x],polyline[n][y],polyline[n][z]], [polyline[n+1][x],polyline[n+1][y],polyline[n+1][z]]) - (2 * margin)), center = true)
-        {shape();}
-
-      }
-      if(n == numpoints-1) {
-          //linear extrude until last point
-          //translate and rotate
-          linear_extrude(height = (lnelem([polyline[n][x],polyline[n][y],polyline[n][z]], [polyline[n+1][x],polyline[n+1][y],polyline[n+1][z]]) - margin), center = true)
-          {shape();}
-      }
+  if(n != 0) {
+    // at P1 (and if larger than 1 polyline) and further there are rotate extrudes
+    if(n >= 1 && numpoints >= 2 && n < numpoints-1)
+    {
+        rotateExtrMidPolyline(polyline[n-1], polyline[n], polyline[n+1]);
+    }
+    if(n>=2 && n < numpoints-1) {
+        linearExtrMidPolyline(polyline[n-2], polyline[n-1], polyline[n], polyline[n+1]) ;
+    }
+    if(n == numpoints-1) {
+        /// THIS THING
+        linearExtrLatest(polyline[n-2], polyline[n-1], polyline[n]);
+    }
   }
+
+}
+
+module rotateExtrMidPolyline(pPrev, pCur, pNext) {
+  echo("pNext=",str(pNext));
+  tempX = xcoordProtate(pPrev, pCur, pNext);
+  tempY = ycoordProtate(pPrev, pCur, pNext);
+  tempZ = zcoordProtate(pPrev, pCur, pNext);
+  translate([tempX,tempY,tempZ])
+  rotate([anglexaxis([tempX,tempY,tempZ], pCur),
+  angleyaxis([tempX,tempY,tempZ], pCur),
+  anglezaxis([tempX,tempY,tempZ], pCur)])
+  rotate_extrude(angle = theta(pPrev,pCur,pNext))
+  shape();
+    //echo("theta",str(theta(pPrev,pCur,pNext)));
+}
+
+
+module linearExtrMidPolyline(pPrevPrev, pPrev, pCur, pNext) {
+  // calculate temporary coordinates and length
+  //temp coord around prev instead of cur?
+  // CHECK IF MARGINS ARE ALRIGHT
+  // ASSERT IF? --> DEBUG
+  tempCoordMarginXbegin = rotateVectorProjOntoVectXBeginOfVecFromCur(pPrevPrev, pPrev, pCur);
+  tempCoordMarginYbegin = rotateVectorProjOntoVectYBeginOfVecFromCur(pPrevPrev, pPrev, pCur);
+  tempCoordMarginZbegin = rotateVectorProjOntoVectZBeginOfVecFromCur(pPrevPrev, pPrev, pCur);
+  tempCoordMarginXnext = rotateVectorProjOntoVectXEndOfVecUntilCur(pPrev, pCur, pNext);
+  tempCoordMarginYnext = rotateVectorProjOntoVectYEndOfVecUntilCur(pPrev, pCur, pNext);
+  tempCoordMarginZnext = rotateVectorProjOntoVectZEndOfVecUntilCur(pPrev, pCur, pNext);
+  lenExtrude = lnelem([tempCoordMarginXbegin,tempCoordMarginYbegin,tempCoordMarginZbegin],
+  [tempCoordMarginXnext ,tempCoordMarginYnext ,tempCoordMarginZnext ]);
+
+  translate([tempCoordMarginXbegin,tempCoordMarginYbegin,tempCoordMarginZbegin])
+  //rotate towards  n+1
+  // too many unnamed argumetns
+  rotate([anglexaxis([tempCoordMarginXbegin,tempCoordMarginYbegin,tempCoordMarginZbegin], pCur),
+  angleyaxis([tempCoordMarginXbegin,tempCoordMarginYbegin,tempCoordMarginZbegin], pCur),
+  anglezaxis([tempCoordMarginXbegin,tempCoordMarginYbegin,tempCoordMarginZbegin], pCur)])
+  linear_extrude(height = lenExtrude, center = true)
+  shape();
+}
+
+
+module linearExtrLatest(pPrevPrev, pPrev, pCur) {
+  //linear extrude until last point
+  //translate and rotate
+  // do something about margin here
+  tempCoordMarginXbegin = rotateVectorProjOntoVectXBeginOfVecFromCur(pPrevPrev, pPrev, pCur);
+  tempCoordMarginYbegin = rotateVectorProjOntoVectYBeginOfVecFromCur(pPrevPrev, pPrev, pCur);
+  tempCoordMarginZbegin = rotateVectorProjOntoVectZBeginOfVecFromCur(pPrevPrev, pPrev, pCur);
+    lenExtrude = lnelem([tempCoordMarginXbegin,tempCoordMarginYbegin,tempCoordMarginZbegin],
+  pCur);
+  linear_extrude(height = lenExtrude, center = true)
+  shape();
 }
 
 module shape() {
-    square(size = [2, 2], center = true);
+    square(size = [section, section], center = true);
 }
 
-function margin([polySegmentUntilNx,polySegmentUntilNy,polySegmentUntilNz], [polySegmentFromNx,polySegmentFromNy,polySegmentFromNz]) =
-(0.5 * section + extra_space) / tan(0.5 * theta([polySegmentUntilNx,polySegmentUntilNy,polySegmentUntilNz], [polySegmentFromNx,polySegmentFromNy,polySegmentFromNz]));
+// every argument is an [x,y,z] vector
+function margin(pPrevious, pCurrent, pNext) =
+(0.5 * section + extra_space) / tan(0.5 * theta(pPrevious, pCurrent, pNext));
 
-function lnelem([x0,y0,z0], [x1,y1,z1]) = abs(
+function lnelem(p0, p1) =
+let (x0 = p0[0]) let (x1 = p1[0]) let (y0 = p0[1]) let (y1 = p1[1]) let (z0 = p0[2]) let (z1 = p1[2])
+abs(
   sqrt(
     pow(abs(x1 - x0),2)+
     pow(abs(y1 - y0),2)+
@@ -75,75 +110,166 @@ function lnelem([x0,y0,z0], [x1,y1,z1]) = abs(
 );
 
 // scalar components HOWEVER does include power of two of length
-function rotateScalarCompProjOntoVectPreviousEnd([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]) =
-  let (vecXrotate = xcoordProtate([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]))
-  let (vecYrotate = ycoordProtate([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]))
-  let (vecZrotate = zcoordProtate([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]))
-(dotproduct([xCurrent,yCurrent,zCurrent], [vecXrotate,vecYrotate,vecZrotate])/lnelem([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent])^2);
+function rotateScalarCompProjOntoVectEndOfVecUntilCur(pPrevious, pCurrent, pNext) =
+  let (xPrevious = pPrevious[0]) let (yPrevious = pPrevious[1]) let (zPrevious = pPrevious[2])
+  let (xCurrent = pCurrent[0]) let (yCurrent = pCurrent[1]) let (zCurrent = pCurrent[2])
+  let (xNext = pNext[0]) let (yNext = pNext[1]) let (zNext = pNext[2])
+  let (vecXrotate = xcoordProtate(pPrevious, pCurrent, pNext))
+  let (vecYrotate = ycoordProtate(pPrevious, pCurrent, pNext))
+  let (vecZrotate = zcoordProtate(pPrevious, pCurrent, pNext))
+dotproduct(pCurrent, [vecXrotate,vecYrotate,vecZrotate])/pow(lnelem(pPrevious, pCurrent),2);
 
-function rotateScalarCompProjOntoVectBeginNext([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]) =
-  let (vecXrotate = xcoordProtate([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]))
-  let (vecYrotate = ycoordProtate([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]))
-  let (vecZrotate = zcoordProtate([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]))
-(dotproduct([xNext,yNext,zNext], [vecXrotate,vecYrotate,vecZrotate])/lnelem([xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])^2);
+function rotateScalarCompProjOntoVectBeginOfVecFromCur(pPrevious, pCurrent, pNext) =
+  let (xPrevious = pPrevious[0]) let (yPrevious = pPrevious[1]) let (zPrevious = pPrevious[2])
+  let (xCurrent = pCurrent[0]) let (yCurrent = pCurrent[1]) let (zCurrent = pCurrent[2])
+  let (xNext = pNext[0]) let (yNext = pNext[1]) let (zNext = pNext[2])
+  let (vecXrotate = xcoordProtate(pPrevious, pCurrent, pNext))
+  let (vecYrotate = ycoordProtate(pPrevious, pCurrent, pNext))
+  let (vecZrotate = zcoordProtate(pPrevious, pCurrent, pNext))
+dotproduct(pNext, [vecXrotate,vecYrotate,vecZrotate])/pow(lnelem(pCurrent, pNext),2);
 
 // to find location of vector minus margin
-function rotateVectorProjOntoVectXPreviousEnd([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]) =
-rotateScalarCompProjOntoVect([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])*xCurrent;
+function rotateVectorProjOntoVectXEndOfVecUntilCur(pPrevious, pCurrent, pNext) =
+let (xPrevious = pPrevious[0]) let (yPrevious = pPrevious[1]) let (zPrevious = pPrevious[2])
+let (xCurrent = pCurrent[0]) let (yCurrent = pCurrent[1]) let (zCurrent = pCurrent[2])
+let (xNext = pNext[0]) let (yNext = pNext[1]) let (zNext = pNext[2])
+rotateScalarCompProjOntoVectEndOfVecUntilCur(pPrevious, pCurrent, pNext)*xCurrent;
 
-function rotateVectorProjOntoVectYPreviousEnd([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]) =
-rotateScalarCompProjOntoVect([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])*yCurrent;
+function rotateVectorProjOntoVectYEndOfVecUntilCur(pPrevious, pCurrent, pNext) =
+let (xPrevious = pPrevious[0]) let (yPrevious = pPrevious[1]) let (zPrevious = pPrevious[2])
+let (xCurrent = pCurrent[0]) let (yCurrent = pCurrent[1]) let (zCurrent = pCurrent[2])
+let (xNext = pNext[0]) let (yNext = pNext[1]) let (zNext = pNext[2])
+rotateScalarCompProjOntoVectEndOfVecUntilCur(pPrevious, pCurrent, pNext)*yCurrent;
 
-function rotateVectorProjOntoVectZPreviousEnd([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]) =
-rotateScalarCompProjOntoVect([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])*zCurrent;
+function rotateVectorProjOntoVectZEndOfVecUntilCur(pPrevious, pCurrent, pNext) =
+let (xPrevious = pPrevious[0]) let (yPrevious = pPrevious[1]) let (zPrevious = pPrevious[2])
+let (xCurrent = pCurrent[0]) let (yCurrent = pCurrent[1]) let (zCurrent = pCurrent[2])
+let (xNext = pNext[0]) let (yNext = pNext[1]) let (zNext = pNext[2])
+rotateScalarCompProjOntoVectEndOfVecUntilCur(pPrevious, pCurrent, pNext)*zCurrent;
 
-function rotateVectorProjOntoVectXBeginNext([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]) =
-rotateScalarCompProjOntoVect([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])*xNext;
+function rotateVectorProjOntoVectXBeginOfVecFromCur(pPrevious, pCurrent, pNext) =
+let (xNext = pNext[0])
+rotateScalarCompProjOntoVectBeginOfVecFromCur(pPrevious, pCurrent, pNext)*xNext;
 
-function rotateVectorProjOntoVectYBeginNext([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]) =
-rotateScalarCompProjOntoVect([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])*yNext;
+function rotateVectorProjOntoVectYBeginOfVecFromCur(pPrevious, pCurrent, pNext) =
+let (xPrevious = pPrevious[0]) let (yPrevious = pPrevious[1]) let (zPrevious = pPrevious[2])
+let (xCurrent = pCurrent[0]) let (yCurrent = pCurrent[1]) let (zCurrent = pCurrent[2])
+let (xNext = pNext[0]) let (yNext = pNext[1]) let (zNext = pNext[2])
+rotateScalarCompProjOntoVectBeginOfVecFromCur(pPrevious, pCurrent, pNext)*yNext;
 
-function rotateVectorProjOntoVectZBeginNext([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]) =
-rotateScalarCompProjOntoVect([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])*zNext;
+function rotateVectorProjOntoVectZBeginOfVecFromCur(pPrevious, pCurrent, pNext) =
+let (xPrevious = pPrevious[0]) let (yPrevious = pPrevious[1]) let (zPrevious = pPrevious[2])
+let (xCurrent = pCurrent[0]) let (yCurrent = pCurrent[1]) let (zCurrent = pCurrent[2])
+let (xNext = pNext[0]) let (yNext = pNext[1]) let (zNext = pNext[2])
+rotateScalarCompProjOntoVectBeginOfVecFromCur(pPrevious, pCurrent, pNext)*zNext;
 
-function dotproduct([x0,y0,z0], [x1,y1,z1]) = x0 * x1 + y0 * y1 + z0 * z1;
+function dotproduct(p0, p1) =
+let (x0 = p0[0]) let (x1 = p1[0]) let (y0 = p0[1]) let (y1 = p1[1]) let (z0 = p0[2]) let (z1 = p1[2])
+x0 * x1 + y0 * y1 + z0 * z1;
 
-function anglexaxis([x0,y0,z0], [x1,y1,z1])  = arccos((abs(x1-x0)/lnelem([x0,y0,z0], [x1,y1,z1]) );
-function angleyaxis([x0,y0,z0], [x1,y1,z1])  = arccos((abs(y1-y0)/lnelem([x0,y0,z0], [x1,y1,z1]) );
-function anglezaxis([x0,y0,z0], [x1,y1,z1])  = arccos((abs(z1-x0)/lnelem([x0,y0,z0], [x1,y1,z1]) );
+function anglexaxis(p0, p1)  =
+let (x0 = p0[0]) let (x1 = p1[0]) let (y0 = p0[1]) let (y1 = p1[1]) let (z0 = p0[2]) let (z1 = p1[2])
+echo("lnelemPtempPcur",str(lnelem(p0,p1)))
+acos(abs(x1-x0)/lnelem(p0, p1));
 
-function lnxcomp([x0,y0,z0], [x1,y1,z1]) = abs(x1-x0);
-function lnycomp([x0,y0,z0], [x1,y1,z1]) = abs(y1-y0);
-function lnzcomp([x0,y0,z0], [x1,y1,z1]) = abs(z1-z0);
+function angleyaxis(p0, p1)  =
+let (x0 = p0[0]) let (x1 = p1[0]) let (y0 = p0[1]) let (y1 = p1[1]) let (z0 = p0[2]) let (z1 = p1[2])
+acos(abs(y1-y0)/lnelem(p0, p1));
 
-// calc angle between vectors, 0 being n, 1 being n+1
-function theta([polySegmentUntilNx,polySegmentUntilNy,polySegmentUntilNz], [polySegmentFromNx,polySegmentFromNy,polySegmentFromNz]) = acos(
-(lnxcomp(polySegmentFromNx) * lnxcomp(polySegmentToNx) +
-lnycomp(polySegmentFromNy) * lnycomp(polySegmentToNy) +
-lnzcomp(polySegmentFromNz) * lnzcomp(polySegmentToNz))
+function anglezaxis(p0, p1)  =
+let (x0 = p0[0]) let (x1 = p1[0]) let (y0 = p0[1]) let (y1 = p1[1]) let (z0 = p0[2]) let (z1 = p1[2])
+acos(abs(z1-x0)/lnelem(p0, p1));
+
+function lnxcomp(p0, p1) =
+let (x0 = p0[0]) let (x1 = p1[0]) let (y0 = p0[1]) let (y1 = p1[1]) let (z0 = p0[2]) let (z1 = p1[2])
+abs(x1-x0);
+
+function lnycomp(p0, p1) =
+let (x0 = p0[0]) let (x1 = p1[0]) let (y0 = p0[1]) let (y1 = p1[1]) let (z0 = p0[2]) let (z1 = p1[2])
+abs(y1-y0);
+
+function lnzcomp(p0, p1) =
+let (x0 = p0[0]) let (x1 = p1[0]) let (y0 = p0[1]) let (y1 = p1[1]) let (z0 = p0[2]) let (z1 = p1[2])
+// undef
+assert(!is_undef(z1),str(z1,z0))
+abs(z1-z0);
+
+
+function theta(pPrevious, pCurrent, pNext) =
+// check somewhere theta not used when pCurrent is nmax
+acos(
+  //ln things need TWO arguments
+(lnxcomp(pCurrent, pNext) * lnxcomp(pPrevious, pCurrent) +
+lnycomp(pCurrent, pNext) * lnycomp(pPrevious, pCurrent) +
+lnzcomp(pCurrent, pNext) * lnzcomp(pPrevious, pCurrent))
 / ( (abs(sqrt(
-      pow(abs(lnxcomp(polySegmentToNx)),2)+
-      pow(abs(lnycomp(polySegmentToNy)),2)+
-      pow(abs(lnzcomp(polySegmentToNz)),2)))*
+      pow(abs(lnxcomp(pPrevious, pCurrent)),2)+
+      pow(abs(lnycomp(pPrevious, pCurrent)),2)+
+      pow(abs(lnzcomp(pPrevious, pCurrent)),2)))*
     abs(sqrt(
-      pow(abs(lnxcomp(polySegmentFromNx)),2)+
-      pow(abs(lnycomp(polySegmentFromNy)),2)+
-      pow(abs(lnzcomp(polySegmentFromNz)),2))
+      pow(abs(lnxcomp(pCurrent, pNext)),2)+
+      pow(abs(lnycomp(pCurrent, pNext)),2)+
+      pow(abs(lnzcomp(pCurrent, pNext)),2))
 ))));
 
 
-
 // functions for rotate vector where x,y,z 0 = n-1, x,y,z 1 = n
-function lnRotationPointVector([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])) = (0.5*section+extra_space) / sin(0.5*theta([xCurrent,yCurrent,zCurrent],[xNext,yNext,zNext])));
+function lnRotationPointVector(pPrevious, pCurrent, pNext) =
+let (xPrevious = pPrevious[0]) let (yPrevious = pPrevious[1]) let (zPrevious = pPrevious[2])
+let (xCurrent = pCurrent[0]) let (yCurrent = pCurrent[1]) let (zCurrent = pCurrent[2])
+let (xNext = pNext[0]) let (yNext = pNext[1]) let (zNext = pNext[2])
+(0.5*section+extra_space) / sin(0.5*theta(pPrevious, pCurrent, pNext));
 
-function anglPolylineSegmentXaxis([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]) = anglexaxis([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent]) + theta([xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]) - 180;
-function anglPolylineSegmentYaxis([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]) = angleyaxis([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent]) + theta([xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]) - 180;
-function anglPolylineSegmentZaxis([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]) = anglezaxis([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent]) + theta([xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]) - 180;
+function anglPolylineSegmentXaxis(pPrevious, pCurrent, pNext) =
+let (xPrevious = pPrevious[0]) let (yPrevious = pPrevious[1]) let (zPrevious = pPrevious[2])
+let (xCurrent = pCurrent[0]) let (yCurrent = pCurrent[1]) let (zCurrent = pCurrent[2])
+let (xNext = pNext[0]) let (yNext = pNext[1]) let (zNext = pNext[2])
+anglexaxis(pPrevious, pCurrent) + theta(pPrevious, pCurrent, pNext) - 180;
 
-function xcompRotationVector([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])) = lnRotationPointVector([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent]) * cos(anglPolylineSegmentXaxis([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])));
-function ycompRotationVector([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])) = lnRotationPointVector([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent]) * cos(anglPolylineSegmentYaxis([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])));
-function zcompRotationVector([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])) = lnRotationPointVector([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent]) * cos(anglPolylineSegmentZaxis([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])));
+function anglPolylineSegmentYaxis(pPrevious, pCurrent, pNext) =
+let (xPrevious = pPrevious[0]) let (yPrevious = pPrevious[1]) let (zPrevious = pPrevious[2])
+let (xCurrent = pCurrent[0]) let (yCurrent = pCurrent[1]) let (zCurrent = pCurrent[2])
+let (xNext = pNext[0]) let (yNext = pNext[1]) let (zNext = pNext[2])
+angleyaxis(pPrevious, pCurrent) + theta(pPrevious, pCurrent, pNext) - 180;
 
-function xcoordProtate([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]) = xcompRotationVector([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])) + xPrevious;
-function ycoordProtate([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]) = ycompRotationVector([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])) + yPrevious;
-function zcoordProtate([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext]) = zcompRotationVector([xPrevious,yPrevious,zPrevious], [xCurrent,yCurrent,zCurrent], [xNext,yNext,zNext])) + zPrevious;
+function anglPolylineSegmentZaxis(pPrevious, pCurrent, pNext) =
+let (xPrevious = pPrevious[0]) let (yPrevious = pPrevious[1]) let (zPrevious = pPrevious[2])
+let (xCurrent = pCurrent[0]) let (yCurrent = pCurrent[1]) let (zCurrent = pCurrent[2])
+let (xNext = pNext[0]) let (yNext = pNext[1]) let (zNext = pNext[2])
+anglezaxis(pPrevious, pCurrent) + theta(pPrevious, pCurrent, pNext) - 180;
+
+function xcompRotationVector(pPrevious, pCurrent, pNext) =
+let (xPrevious = pPrevious[0]) let (yPrevious = pPrevious[1]) let (zPrevious = pPrevious[2])
+let (xCurrent = pCurrent[0]) let (yCurrent = pCurrent[1]) let (zCurrent = pCurrent[2])
+let (xNext = pNext[0]) let (yNext = pNext[1]) let (zNext = pNext[2])
+lnRotationPointVector(pPrevious, pCurrent, pNext) * cos(anglPolylineSegmentXaxis(pPrevious, pCurrent, pNext));
+
+function ycompRotationVector(pPrevious, pCurrent, pNext) =
+let (xPrevious = pPrevious[0]) let (yPrevious = pPrevious[1]) let (zPrevious = pPrevious[2])
+let (xCurrent = pCurrent[0]) let (yCurrent = pCurrent[1]) let (zCurrent = pCurrent[2])
+let (xNext = pNext[0]) let (yNext = pNext[1]) let (zNext = pNext[2])
+lnRotationPointVector(pPrevious, pCurrent, pNext) * cos(anglPolylineSegmentYaxis(pPrevious, pCurrent, pNext));
+
+function zcompRotationVector(pPrevious, pCurrent, pNext) =
+let (xPrevious = pPrevious[0]) let (yPrevious = pPrevious[1]) let (zPrevious = pPrevious[2])
+let (xCurrent = pCurrent[0]) let (yCurrent = pCurrent[1]) let (zCurrent = pCurrent[2])
+let (xNext = pNext[0]) let (yNext = pNext[1]) let (zNext = pNext[2])
+lnRotationPointVector(pPrevious, pCurrent, pNext) * cos(anglPolylineSegmentZaxis(pPrevious, pCurrent, pNext));
+
+function xcoordProtate(pPrevious, pCurrent, pNext) =
+let (xPrevious = pPrevious[0]) let (yPrevious = pPrevious[1]) let (zPrevious = pPrevious[2])
+let (xCurrent = pCurrent[0]) let (yCurrent = pCurrent[1]) let (zCurrent = pCurrent[2])
+let (xNext = pNext[0]) let (yNext = pNext[1]) let (zNext = pNext[2])
+xcompRotationVector(pPrevious, pCurrent, pNext) + xPrevious;
+
+function ycoordProtate(pPrevious, pCurrent, pNext) =
+let (xPrevious = pPrevious[0]) let (yPrevious = pPrevious[1]) let (zPrevious = pPrevious[2])
+let (xCurrent = pCurrent[0]) let (yCurrent = pCurrent[1]) let (zCurrent = pCurrent[2])
+let (xNext = pNext[0]) let (yNext = pNext[1]) let (zNext = pNext[2])
+ycompRotationVector(pPrevious, pCurrent, pNext) + yPrevious;
+
+function zcoordProtate(pPrevious, pCurrent, pNext) =
+let (xPrevious = pPrevious[0]) let (yPrevious = pPrevious[1]) let (zPrevious = pPrevious[2])
+let (xCurrent = pCurrent[0]) let (yCurrent = pCurrent[1]) let (zCurrent = pCurrent[2])
+let (xNext = pNext[0]) let (yNext = pNext[1]) let (zNext = pNext[2])
+zcompRotationVector(pPrevious, pCurrent, pNext) + zPrevious;
